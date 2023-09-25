@@ -1,15 +1,26 @@
 {
-	"name": "electro-stream-ui",
-	"private": true,
-	"version": "0.0.0",
-	"type": "module",
-	"scripts": {
-		"dev": "vite",
-		"build": "tsc && vite build",
-		"preview": "vite preview"
-	},
-	"devDependencies": {
-		"typescript": "^5.0.2",
-		"vite": "^4.3.9"
-	}
+  "name": "lighting-element-central",
+  "description": "",
+  "author": "",
+  "license": "",
+  "private": true,
+  "scripts": {
+    "eslint": "eslint **/*.{js,ts}",
+    "eslint:fix": "eslint --fix **/*.{js,ts}",
+    "stylelint": "stylelint --config .stylelintrc.cjs \"**/*.css\" --fix",
+    "format": "prettier --write",
+    "reset": "rm -rf node_modules yarn.lock package-lock.json */**/node_modules && yarn cache clean && npm cache clean -f"
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.3",
+    "stylelint": "^15.10.3",
+    "stylelint-prettier": "^4.0.2",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9"
+  },
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ]
 }
